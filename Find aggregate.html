@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>Material Design Input Text</title>
+    
+    
+    <link rel="stylesheet" href="css/reset.css">
+
+    
+        <link rel="stylesheet" href="css/style.css">
+
+    
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+<link href='http://fonts.googleapis.com/css?family=Roboto:400' rel='stylesheet' type='text/css'>
+    
+    
+  </head>
+
+  <body>
+
+    
+  <h1>B.Tech Aggregate Calculator
+<br><br>
+  </h1>
+  <div>
+  <input placeholder="First Year*" type="number" id="txt1" required="true"> 
+  <input placeholder="Second Year*" type="number" id="txt2" required="true">
+   <input placeholder="Third Year*" type="number" id="txt3" required="true">
+   <input placeholder="Fourth Year" type="number" id="txt4" value=0 required="">
+
+ 
+  <button onclick="sum()">Calculate</button>
+
+<input placeholder="Result showed Here" id="text5" required="">  
+  * Fields Are Required
+  </div>
+ 
+  <script type="text/javascript">
+ function sum() {
+             
+              var First= document.getElementById('txt1').value;
+              var Second = document.getElementById('txt2').value;
+              var Third= document.getElementById('txt3').value;
+              var Fourth = document.getElementById('txt4').value;
+             
+              var result =parseInt(First)*0.25+parseInt(Second)*0.50+parseInt(Third)*0.75+ parseInt(Fourth);
+              var result1;
+              if(Fourth==0||txt4==null)
+               result1=result/30;
+              else
+                result1=result/50;
+               if (!isNaN(result1)) {
+                  document.getElementById('text5').value = result1;
+              }
+          }
+  </script>  
+    
+    
+    
+    
+  </body>
+</html>
